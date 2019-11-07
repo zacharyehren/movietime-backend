@@ -1,0 +1,19 @@
+{
+  "name": "movietimeapi",
+  "version": "1.0.0",
+  "description": "RESTful movietimeapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zacharyehren/movietime-backend.git"
+  },
+  "author": "zachary ehren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zacharyehren/movietime-backend/issues"
+  },
+  "homepage": "https://github.com/zacharyehren/movietime-backend#readme"
+}
