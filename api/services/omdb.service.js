@@ -3,13 +3,13 @@ const ApiDetails = require('../apidetails')
 const uri = "http://www.omdbapi.com/?apikey="
 const key = ApiDetails.apiKey;
 
-const getMovie = async () => {
+const getMovie = async (title) => {
   try {
     return await axios({
       method: 'get',
       url: uri + key,
       data: {
-        s: "Jurassic Park"
+        s: title
       }
     }
     );
@@ -18,4 +18,4 @@ const getMovie = async () => {
   }
 };
 
-getMovie();
+getMovie("Jurassic Park");
