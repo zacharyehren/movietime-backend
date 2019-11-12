@@ -1,13 +1,21 @@
 const axios = require('axios');
 const ApiDetails = require('../apidetails')
-const uri = "http://www.omdbapi.com/?"
+const uri = "http://www.omdbapi.com/?apikey="
 const key = ApiDetails.apiKey;
 
-const query = axios({
-    method: 'get',
-    url: '/user/12345',
-    data: {
-      firstName: 'Fred',
-      lastName: 'Flintstone'
+const getMovie = async () => {
+  try {
+    return await axios({
+      method: 'get',
+      url: uri + key,
+      data: {
+        s: "Jurassic Park"
+      }
     }
-  });
+    );
+  } catch(error) {
+    console.log(error);
+  }
+};
+
+getMovie();
