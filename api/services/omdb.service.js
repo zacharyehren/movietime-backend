@@ -3,19 +3,20 @@ const ApiDetails = require('../apidetails')
 const uri = "http://www.omdbapi.com/?apikey="
 const key = ApiDetails.apiKey;
 
-const getMovie = async (title) => {
+const getMovie = async (title, year = null) => {
   try {
-    return await axios({
+    const payload = await axios({
       method: 'get',
       url: uri + key,
-      data: {
-        s: title
+      params: {
+        t: title,
+        y: year
       }
     }
     );
+    console.log(payload);
+    return payload;
   } catch(error) {
-    console.log(error);
+    console.error(error);
   }
 };
-
-getMovie("Jurassic Park");
