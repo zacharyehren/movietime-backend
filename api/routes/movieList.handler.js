@@ -1,7 +1,7 @@
 const omdbService = require('../services/omdb.service.js');
 
 const searchForMovie = (request) => {
-    console.log(request);
+    omdbService.getMovie(request.params.searchQuery);
 }
 
 module.exports = {

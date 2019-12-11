@@ -20,3 +20,7 @@ const getMovie = async (title, year = null) => {
     console.error(error);
   }
 };
+
+module.exports = {
+  getMovie
+}
